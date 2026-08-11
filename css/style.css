@@ -1,0 +1,244 @@
+/* ==========================================================================
+   RIOX SPOR — custom styles (on top of Tailwind utility classes)
+   ========================================================================== */
+
+:root {
+  --navy-950: #071527;
+  --navy-900: #0a1f3d;
+  --navy-800: #123159;
+  --navy-700: #1b4477;
+  --brand: #0ea5e9;
+  --brand-dark: #0284c7;
+  --accent: #f4632a;
+  --accent-dark: #d6501b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5,
+.font-display {
+  font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Offset anchored sections so they don't hide behind the sticky header */
+section[id] {
+  scroll-margin-top: 112px;
+}
+
+/* ==========================================================================
+   Top bar & nav
+   ========================================================================== */
+
+#site-header.is-scrolled #main-nav {
+  box-shadow: 0 8px 24px -8px rgba(10, 31, 61, 0.25);
+}
+
+#site-header.is-scrolled #main-nav .logo-tagline {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+#mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+#mobile-menu.open {
+  max-height: 640px;
+}
+
+/* ==========================================================================
+   Hero slider
+   ========================================================================== */
+
+.hero-slide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.9s ease;
+  position: absolute;
+  inset: 0;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+
+.hero-bg-pattern {
+  background-image:
+    repeating-linear-gradient(115deg, rgba(255, 255, 255, 0.06) 0px, rgba(255, 255, 255, 0.06) 2px, transparent 2px, transparent 46px),
+    repeating-linear-gradient(115deg, rgba(244, 99, 42, 0.10) 0px, rgba(244, 99, 42, 0.10) 10px, transparent 10px, transparent 80px);
+}
+
+.hero-slide-1 {
+  background: radial-gradient(circle at 85% 20%, rgba(14, 165, 233, 0.35), transparent 55%), linear-gradient(120deg, var(--navy-950) 0%, var(--navy-900) 45%, var(--navy-800) 100%);
+}
+
+.hero-slide-2 {
+  background: radial-gradient(circle at 15% 80%, rgba(244, 99, 42, 0.30), transparent 55%), linear-gradient(120deg, var(--navy-900) 0%, var(--navy-700) 55%, var(--brand-dark) 130%);
+}
+
+.hero-content {
+  transform: translateY(24px);
+  opacity: 0;
+  transition: transform 0.7s ease 0.25s, opacity 0.7s ease 0.25s;
+}
+
+.hero-slide.active .hero-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.4);
+  transition: all 0.25s ease;
+}
+
+.hero-dot.active {
+  width: 28px;
+  background: var(--accent);
+}
+
+.shoe-float {
+  animation: shoe-float 5s ease-in-out infinite;
+}
+
+@keyframes shoe-float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-16px) rotate(1deg); }
+}
+
+/* ==========================================================================
+   Product image cropping — hide hand / background clutter from source photos
+   ========================================================================== */
+
+.shoe-photo {
+  object-fit: cover;
+  object-position: 50% 18%;
+  transform: scale(1.55);
+  transform-origin: 50% 15%;
+  transition: transform 0.5s ease;
+}
+
+.shoe-photo-wide {
+  object-fit: cover;
+  object-position: 50% 22%;
+  transform: scale(1.35);
+  transform-origin: 50% 20%;
+  transition: transform 0.5s ease;
+}
+
+.group:hover .shoe-photo,
+.group:hover .shoe-photo-wide {
+  transform: scale(1.65);
+}
+
+.group:hover .shoe-photo-wide {
+  transform: scale(1.45);
+}
+
+/* ==========================================================================
+   About section background (placeholder graphic, no real photo available)
+   ========================================================================== */
+
+.about-bg {
+  background:
+    linear-gradient(115deg, rgba(7, 21, 39, 0.94) 0%, rgba(10, 31, 61, 0.90) 55%, rgba(18, 49, 89, 0.88) 100%),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.035) 0px, rgba(255, 255, 255, 0.035) 1px, transparent 1px, transparent 34px),
+    repeating-linear-gradient(-45deg, rgba(14, 165, 233, 0.06) 0px, rgba(14, 165, 233, 0.06) 1px, transparent 1px, transparent 34px);
+  background-color: var(--navy-900);
+}
+
+.dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.18) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
+}
+
+/* ==========================================================================
+   Misc
+   ========================================================================== */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.fade-up.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-accent {
+  background: var(--accent);
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-accent:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -10px rgba(244, 99, 42, 0.55);
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+#back-to-top {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(12px);
+}
+
+#back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+#toast {
+  transform: translateY(-16px);
+  opacity: 0;
+  transition: all 0.35s ease;
+  pointer-events: none;
+}
+
+#toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
