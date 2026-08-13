@@ -237,52 +237,59 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-wrap items-end justify-between gap-6 mb-10 fade-up">
         <div>
-          <span class="text-accent font-semibold tracking-widest uppercase text-xs" data-tr="Kampanya" data-en="Campaign">Kampanya</span>
-          <h2 class="font-display font-bold text-3xl sm:text-4xl text-navy-900 mt-2" data-tr="Okula Dönüş Koleksiyonu" data-en="Back to School Collection">Okula Dönüş Koleksiyonu</h2>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-navy-900" data-tr="Okula Dönüş Koleksiyonu" data-en="Back to School Collection">Okula Dönüş Koleksiyonu</h2>
           <p class="text-navy-500 mt-3 max-w-2xl" data-tr="31/35 numara aralığında hafif, esnek, rahat ve dayanıklı okul ayakkabılarımızla öğrencileri güvenle karşılıyoruz." data-en="With our lightweight, flexible, comfortable, and durable school shoes in sizes 31/35, we welcome students back to school with confidence.">31/35 numara aralığında hafif, esnek, rahat ve dayanıklı okul ayakkabılarımızla öğrencileri güvenle karşılıyoruz.</p>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <button id="campaign-prev" type="button" aria-label="Önceki" class="w-11 h-11 flex items-center justify-center rounded-full bg-white hover:bg-navy-900 hover:text-white border border-gray-200 text-navy-900 shadow-sm transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button id="campaign-next" type="button" aria-label="Sonraki" class="w-11 h-11 flex items-center justify-center rounded-full bg-white hover:bg-navy-900 hover:text-white border border-gray-200 text-navy-900 shadow-sm transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
         </div>
       </div>
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex gap-5 overflow-x-auto scrollbar-none snap-x snap-mandatory pb-4 fade-up" style="transition-delay:.08s">
+      <div id="campaign-track" class="flex gap-5 overflow-x-auto scrollbar-none snap-x snap-mandatory pb-4 fade-up cursor-grab select-none" style="transition-delay:.08s">
         <div class="snap-start shrink-0 w-[230px] sm:w-[260px] aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white">
-          <img src="assets/shoe25.jpeg" alt="RIOX KIDS okula dönüş kampanyası - leopar desenli kız çocuk ayakkabısı" class="w-full h-full object-cover" />
+          <img src="assets/shoe25.jpeg" alt="RIOX KIDS okula dönüş kampanyası - leopar desenli kız çocuk ayakkabısı" class="w-full h-full object-cover" draggable="false" />
         </div>
         <div class="snap-start shrink-0 w-[230px] sm:w-[260px] aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white">
-          <img src="assets/shoe26.jpeg" alt="RIOX KIDS okula dönüş kampanyası - lila kız çocuk ayakkabısı" class="w-full h-full object-cover" />
+          <img src="assets/shoe26.jpeg" alt="RIOX KIDS okula dönüş kampanyası - lila kız çocuk ayakkabısı" class="w-full h-full object-cover" draggable="false" />
         </div>
         <div class="snap-start shrink-0 w-[230px] sm:w-[260px] aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white">
-          <img src="assets/shoe27.jpeg" alt="RIOX KIDS okula dönüş kampanyası - pembe kız çocuk ayakkabısı" class="w-full h-full object-cover" />
+          <img src="assets/shoe27.jpeg" alt="RIOX KIDS okula dönüş kampanyası - pembe kız çocuk ayakkabısı" class="w-full h-full object-cover" draggable="false" />
         </div>
         <div class="snap-start shrink-0 w-[230px] sm:w-[260px] aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white">
-          <img src="assets/shoe28.jpeg" alt="RIOX KIDS okula dönüş kampanyası - pastel kız çocuk ayakkabısı" class="w-full h-full object-cover" />
+          <img src="assets/shoe28.jpeg" alt="RIOX KIDS okula dönüş kampanyası - pastel kız çocuk ayakkabısı" class="w-full h-full object-cover" draggable="false" />
         </div>
         <div class="snap-start shrink-0 w-[230px] sm:w-[260px] aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white">
-          <img src="assets/shoe29.jpeg" alt="RIOX KIDS okula dönüş kampanyası - pembe kız çocuk ayakkabısı" class="w-full h-full object-cover" />
+          <img src="assets/shoe29.jpeg" alt="RIOX KIDS okula dönüş kampanyası - pembe kız çocuk ayakkabısı" class="w-full h-full object-cover" draggable="false" />
         </div>
         <div class="snap-start shrink-0 w-[230px] sm:w-[260px] aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white">
-          <img src="assets/shoe30.jpeg" alt="RIOX KIDS okula dönüş kampanyası - mor kız çocuk ayakkabısı" class="w-full h-full object-cover" />
+          <img src="assets/shoe30.jpeg" alt="RIOX KIDS okula dönüş kampanyası - mor kız çocuk ayakkabısı" class="w-full h-full object-cover" draggable="false" />
         </div>
         <div class="snap-start shrink-0 w-[230px] sm:w-[260px] aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white">
-          <img src="assets/shoe31.jpeg" alt="RIOX KIDS okula dönüş kampanyası - siyah turuncu erkek çocuk ayakkabısı" class="w-full h-full object-cover" />
+          <img src="assets/shoe31.jpeg" alt="RIOX KIDS okula dönüş kampanyası - siyah turuncu erkek çocuk ayakkabısı" class="w-full h-full object-cover" draggable="false" />
         </div>
         <div class="snap-start shrink-0 w-[230px] sm:w-[260px] aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white">
-          <img src="assets/shoe32.jpeg" alt="RIOX KIDS okula dönüş kampanyası - gri mavi erkek çocuk ayakkabısı" class="w-full h-full object-cover" />
+          <img src="assets/shoe32.jpeg" alt="RIOX KIDS okula dönüş kampanyası - gri mavi erkek çocuk ayakkabısı" class="w-full h-full object-cover" draggable="false" />
         </div>
         <div class="snap-start shrink-0 w-[230px] sm:w-[260px] aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white">
-          <img src="assets/shoe33.jpeg" alt="RIOX KIDS okula dönüş kampanyası - siyah beyaz erkek çocuk ayakkabısı" class="w-full h-full object-cover" />
+          <img src="assets/shoe33.jpeg" alt="RIOX KIDS okula dönüş kampanyası - siyah beyaz erkek çocuk ayakkabısı" class="w-full h-full object-cover" draggable="false" />
         </div>
         <div class="snap-start shrink-0 w-[230px] sm:w-[260px] aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white">
-          <img src="assets/shoe34.jpeg" alt="RIOX KIDS okula dönüş kampanyası - lacivert sarı erkek çocuk ayakkabısı" class="w-full h-full object-cover" />
+          <img src="assets/shoe34.jpeg" alt="RIOX KIDS okula dönüş kampanyası - lacivert sarı erkek çocuk ayakkabısı" class="w-full h-full object-cover" draggable="false" />
         </div>
         <div class="snap-start shrink-0 w-[230px] sm:w-[260px] aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-white">
-          <img src="assets/shoe35.jpeg" alt="RIOX KIDS okula dönüş kampanyası - siyah yeşil erkek çocuk ayakkabısı" class="w-full h-full object-cover" />
+          <img src="assets/shoe35.jpeg" alt="RIOX KIDS okula dönüş kampanyası - siyah yeşil erkek çocuk ayakkabısı" class="w-full h-full object-cover" draggable="false" />
         </div>
       </div>
       <p class="text-navy-400 text-xs mt-3 flex items-center gap-1.5">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="8" x2="23" y2="13"/><line x1="23" y1="8" x2="18" y2="13"/><line x1="1" y1="8" x2="6" y2="13"/><line x1="6" y1="8" x2="1" y2="13"/></svg>
-        <span data-tr="Kaydırarak tüm kampanya görsellerini görüntüleyebilirsiniz" data-en="Scroll sideways to see all campaign visuals">Kaydırarak tüm kampanya görsellerini görüntüleyebilirsiniz</span>
+        <span data-tr="Oklara tıklayarak veya kaydırarak tüm görselleri görüntüleyebilirsiniz" data-en="Use the arrows or swipe sideways to see all visuals">Oklara tıklayarak veya kaydırarak tüm görselleri görüntüleyebilirsiniz</span>
       </p>
     </div>
   </section>
@@ -633,10 +640,10 @@
             <div>
               <h4 class="font-semibold text-navy-900 mb-2" data-tr="Telefon" data-en="Phone">Telefon</h4>
               <ul class="text-navy-500 text-sm leading-relaxed space-y-1.5">
-                <li><span class="font-medium text-navy-700">Muhammed Ergün</span>: <a href="tel:+905442448220" class="hover:text-accent">0544 244 82 20</a></li>
+                <li><span class="font-medium text-navy-700">Yusuf Ergün</span>: <a href="tel:+905335469923" class="hover:text-accent">0533 546 99 23</a></li>
                 <li><span class="font-medium text-navy-700">Basri Ergün</span>: <a href="tel:+905368648780" class="hover:text-accent">0536 864 87 80</a></li>
                 <li><span class="font-medium text-navy-700">Ömer Ergün</span>: <a href="tel:+905335469923" class="hover:text-accent">0533 546 99 23</a></li>
-                <li><span class="font-medium text-navy-700">Yusuf Ergün</span>: <a href="tel:+905335469923" class="hover:text-accent">0533 546 99 23</a></li>
+                <li><span class="font-medium text-navy-700">Muhammed Ergün</span>: <a href="tel:+905442448220" class="hover:text-accent">0544 244 82 20</a></li>
               </ul>
             </div>
           </div>
@@ -750,10 +757,10 @@
         <h4 class="font-display font-semibold text-white mb-5" data-tr="İletişim" data-en="Contact">İletişim</h4>
         <ul class="space-y-3 text-sm text-navy-300">
           <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-0.5 shrink-0 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Yaprak Mah. Nizip Cad. No:144, Şehitkamil / Gaziantep</li>
-          <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-0.5 shrink-0 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +90 544 244 82 20 (Muhammed Ergün)</li>
+          <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-0.5 shrink-0 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +90 533 546 99 23 (Yusuf Ergün)</li>
           <li class="flex gap-2 pl-6">+90 536 864 87 80 (Basri Ergün)</li>
           <li class="flex gap-2 pl-6">+90 533 546 99 23 (Ömer Ergün)</li>
-          <li class="flex gap-2 pl-6">+90 533 546 99 23 (Yusuf Ergün)</li>
+          <li class="flex gap-2 pl-6">+90 544 244 82 20 (Muhammed Ergün)</li>
           <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-0.5 shrink-0 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 6c0-1.1-.9-2-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6z"/><path d="m22 6-10 7L2 6"/></svg> info@rioxspor.com</li>
         </ul>
       </div>

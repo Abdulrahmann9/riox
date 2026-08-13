@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initStickyHeader();
   initMobileMenu();
   initHeroSlider();
+  initCampaignGallery();
   initScrollSpy();
   initReadMore();
   initQuoteForms();
@@ -200,6 +201,60 @@ function initHeroSlider() {
   slider.addEventListener("mouseleave", start);
 
   start();
+}
+
+/* ---------------------------------------------------------------------- */
+/* "Okula Dönüş Koleksiyonu" horizontal gallery — prev/next scroll buttons */
+/* ---------------------------------------------------------------------- */
+function initCampaignGallery() {
+  var track = document.getElementById("campaign-track");
+  var prevBtn = document.getElementById("campaign-prev");
+  var nextBtn = document.getElementById("campaign-next");
+  if (!track) return;
+
+  function scrollByCard(direction) {
+    var card = track.querySelector(":scope > div");
+    var step = card ? card.getBoundingClientRect().width + 20 : track.clientWidth * 0.8;
+    track.scrollBy({ left: direction * step, behavior: "smooth" });
+  }
+
+  if (prevBtn) prevBtn.addEventListener("click", function () { scrollByCard(-1); });
+  if (nextBtn) nextBtn.addEventListener("click", function () { scrollByCard(1); });
+
+  function updateButtonState() {
+    if (!prevBtn || !nextBtn) return;
+    var maxScroll = track.scrollWidth - track.clientWidth - 2;
+    prevBtn.classList.toggle("opacity-40", track.scrollLeft <= 2);
+    nextBtn.classList.toggle("opacity-40", track.scrollLeft >= maxScroll);
+  }
+
+  track.addEventListener("scroll", updateButtonState, { passive: true });
+  updateButtonState();
+
+  /* Allow click-and-drag panning with a mouse (not just touch/trackpad swipe) */
+  var isDown = false;
+  var startX = 0;
+  var startScroll = 0;
+
+  track.addEventListener("mousedown", function (e) {
+    isDown = true;
+    track.classList.add("cursor-grabbing");
+    startX = e.pageX;
+    startScroll = track.scrollLeft;
+  });
+
+  ["mouseleave", "mouseup"].forEach(function (evt) {
+    track.addEventListener(evt, function () {
+      isDown = false;
+      track.classList.remove("cursor-grabbing");
+    });
+  });
+
+  track.addEventListener("mousemove", function (e) {
+    if (!isDown) return;
+    e.preventDefault();
+    track.scrollLeft = startScroll - (e.pageX - startX);
+  });
 }
 
 /* ---------------------------------------------------------------------- */

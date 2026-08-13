@@ -218,6 +218,11 @@ section[id] {
   display: none;
 }
 
+.cursor-grabbing,
+.cursor-grabbing * {
+  cursor: grabbing !important;
+}
+
 #back-to-top {
   opacity: 0;
   pointer-events: none;
